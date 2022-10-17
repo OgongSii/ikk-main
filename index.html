@@ -10,49 +10,63 @@
 </head>
 
 <body ondragstart="return false">
-  <div class="logo">
-    <img src="./css/img/f.png" height="25px">
-    <img src="./css/img/fence.png" height="25px">
-  </div>
+  <div class="section" id="section1">
+    <div id="section1_detail">
+
+      <div class="logo">
+        <img src="./css/img/f.png" height="25px">
+        <img src="./css/img/fence.png" height="25px">
+      </div>
 
 
-  <div class="hamburger-menu">
-    <input id="menu__toggle" type="checkbox" />
-    <label class="menu__btn" for="menu__toggle">
-      <span></span>
-    </label>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
 
-    <ul class="menu__box">
-      <li><a class="menu__item">Home</a></li>
-      <li><a class="menu__item" href="https://nojari-ikk-1-4-cleening.netlify.app/">Fence_nojari</a></li>
-      <li><a class="menu__item" href="https://binary-tree-visualiser-ikk-ko.netlify.app/">ko_tree</a></li>
-    </ul>
-  </div>
-  <div class="main">
-    <p class="title">1학년 4반 <br>웹 페이지 통합 서비스</p>
-    <div class="imgimg">
-    <img src="./css/img/f.png" height="50px">
-    <img src="./css/img/fence.png" height="50px">
+        <ul class="menu__box">
+          <li><a class="menu__item">Home</a></li>
+          <li><a class="menu__item" href="https://nojari-ikk-1-4-cleening.netlify.app/">Fence_nojari</a></li>
+          <li><a class="menu__item" href="https://binary-tree-visualiser-ikk-ko.netlify.app/">ko_tree</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <p class="title">1학년 4반 <br>웹 페이지 통합 서비스</p>
+        <div class="imgimg">
+          <img src="./css/img/f.png" height="50px">
+          <img src="./css/img/fence.png" height="50px">
+        </div>
+      </div>
+
+
+      <div class="mouse_scroll">
+
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div>
+          <span class="m_scroll_arrows unu"></span>
+          <span class="m_scroll_arrows doi"></span>
+          <span class="m_scroll_arrows trei"></span>
+        </div>
+      </div>
+
     </div>
   </div>
-
-
-  <div class="mouse_scroll">
-
-    <div class="mouse">
-      <div class="wheel"></div>
-    </div>
-    <div>
-      <span class="m_scroll_arrows unu"></span>
-      <span class="m_scroll_arrows doi"></span>
-      <span class="m_scroll_arrows trei"></span>
-    </div>
   </div>
+  <div class="section" id="section2">
+    <div class="update">
+      <!-- <iframe src="/update.html" width="100%" height="100%"></iframe> -->
+    </div>
+    <div class="section" id="section3"></div>
+    <div class="section" id="section4"></div>
+    <div class="section" id="section1">
 
 
-  <div class="update">
-    <iframe src="/update.html" width="80%" height="1080px"></iframe>
-  </div>
+
+
+    </div>
 
 </body>
 
@@ -61,4 +75,10 @@
   window.document.oncontextmenu = new Function("return false");
   window.document.onselectstart = new Function("return false");
   window.document.ondragstart = new Function("return false");
+  window.addEventListener("wheel", function (e) {
+    e.preventDefault();
+  }, { passive: false });
 </script>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="./index.js"></script>
