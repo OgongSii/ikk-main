@@ -9,7 +9,7 @@
   <title>Document</title>
 </head>
 
-<body>
+<body ondragstart="return false">
   <div class="logo">
     <img src="./css/img/f.png" height="25px">
     <img src="./css/img/fence.png" height="25px">
@@ -51,3 +51,8 @@
 </body>
 
 </html>
+<script>
+  window.document.oncontextmenu = new Function("return false");
+  window.document.onselectstart = new Function("return false");
+  window.document.ondragstart = new Function("return false");
+</script>
