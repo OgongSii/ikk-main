@@ -190,6 +190,7 @@ body {
   transform: none;
   border: 2px solid white;
   top: 170px;
+  margin-top: 200px;
 }
 
 .wheel {
