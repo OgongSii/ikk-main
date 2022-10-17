@@ -13,10 +13,19 @@ body {
   font-family: 'Black Han Sans', sans-serif;
   font-size: 100px;
   color: white;
+  height: 150px;
+}
+
+.imgimg {
+    margin-left: 38px;
 }
 
 .logo {
   float: right;
+}
+
+.update {
+    text-align: center;
 }
 
 #menu__toggle {
