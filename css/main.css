@@ -37,6 +37,9 @@ body {
 
 .logo {
   float: right;
+  margin-top: 15px;
+  margin-right: 20px;
+
 }
 
 .update {
