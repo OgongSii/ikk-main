@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>이진 트리 시각화 - 이진 탐색 트리</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="title" content="Web site" />
+        <meta name="description" content="Site description here" />
+        <meta name="keywords" content="keywords here" />
+        <meta name="language" content="en" />
+        <meta name="subject" content="Site subject here" />
+        <meta name="robots" content="All" />
+        <meta name="copyright" content="Your company" />
+        <meta name="abstract" content="Site description here" />
+        <meta name="MSSmartTagsPreventParsing" content="true" />
+
+        <!-- styles -->
+        <link id="theme" rel="stylesheet" type="text/css" href="styles/style.css" title="theme" />
+        <script type="text/javascript" src="styles/style.js"></script>
+        <link href="styles/jquery/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+
+        <!-- third-party scripts: jQuery, jQuery UI and JSGL -->
+        <script type="text/javascript" src="btv/third-party/jsgl.js"></script>
+        <script type="text/javascript" src="btv/third-party/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="btv/third-party/jquery-ui-1.10.3.custom.js"></script>
+
+        <!-- my scripts -->
+        <script type="text/javascript" src="btv/btv.js"></script>
+        <script type="text/javascript" src="btv/Elements.js"></script>
+        <script type="text/javascript" src="btv/BinaryTree.js"></script>
+        <script type="text/javascript" src="btv/Algorithms.js"></script>
+        <script type="text/javascript" src="btv/Visualiser.js"></script>
+        <script type="text/javascript" src="btv/Controllers.js"></script>
+
+    </head>
+    <body> 
+        <!-- top wrapper -->  
+        <!-- <div id="topWrapper">  -->
+            <div id="topBanner">
+                <div>
+                    <iframe class="nojari" src="codeup_printzz/p5.html" width="1100px" height="146px" scrolling="no"></iframe>
+                </div>
+            </div> 
+        </div>   
+        <div id="topnav"> 
+            <ul>
+                <li>
+                    <a href="home.html" shape="rect">홈</a>
+                </li>
+                <li>
+                    <a href="binary-heap.html" shape="rect">이진 힙</a>
+                </li>
+                <li id="current">
+                    <a href="binary-search-tree.html" shape="rect">이진 탐색 트리</a>
+                </li>
+                <li>
+                    <a href="pseudocodes.html" shape="rect">코드</a>
+                </li>
+                <li>
+                    <a href="instructions.html" shape="rect">사용법</a>
+                </li>
+            </ul> 
+        </div>  
+        <!-- end top wrapper -->  
+        <div id="wrapper"> 
+            <div id="container"> 
+                <!--  content -->  
+                <div id="content"> 
+                    <div style="margin-top:20px;">   
+                        <div class="clear"></div>
+
+                        <h1 id="binary_search_tree" class="anchor">이진 탐색 트리</h1>
+
+                        <div id="controlDiv"></div>
+                        <div id="drawDiv"></div>
+
+                        <script type="text/javascript">
+                            var c = new btv.BinarySearchTreeController(document.getElementById("controlDiv"), document.getElementById("drawDiv"));            
+                        </script>
+
+                        <div class="clear"></div>
+
+                        <div class="subsection">
+                            <h2 id="graphic_elements" class="anchor left_clear">설명</h2>
+                            <p>
+                                이미지의 의미
+                            </p>
+                            <table class="instructions">    
+                                <thead>
+                                    <tr>
+                                        <th class="graphicElement">이미지</th>
+                                        <th>의미</th>
+                                        <th>설명</th >
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/node.png" alt="node"/>
+                                        </td>
+                                        <td class="meaning">노드</td>
+                                        <td>
+                                            노드와 노드 안의 값.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/selected_node.png" alt="node"/>
+                                        </td>
+                                        <td class="meaning">선택된 노드</td>
+                                        <td>
+                                            선택한 노드는 빨간색 선으로 강조 표시됩니다. 노드를 클릭하여 선택할 수 있습니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/edge.png" alt="node"/>
+                                        </td>
+                                        <td class="meaning">가장자리</td>
+                                        <td>
+                                            가장자리는 한 노드에서 다른 노드로의 참조입니다. 참조된 노드를 참조 노드의 자식이라고 합니다. 참조 노드를 참조된 노드의 부모라고 합니다.
+                                        </td>
+                                    </tr>                                
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/parent_with_children.png" alt="node"/>
+                                        </td>
+                                        <td class="meaning">부모노드와 자녀노드</td>
+                                        <td>
+                                            이진 트리에는 모든 노드의 최대 두 자식노드 (왼쪽 자식노드와 오른쪽 자식노드)가 있습니다.
+                                        </td>
+                                    </tr>                                
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/comparison_signs.png" alt="node"/>
+                                        </td>
+                                        <td class="meaning">비교 기호</td>
+                                        <td>
+                                            두 노드 (해당 값)를 비교합니다. 기호 중 하나가 중간에 표시됩니다.
+                                        </td>
+                                    </tr>                                                                
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/continue_in_parent,left_child,right_child.png" alt="node"/>
+                                        </td>
+                                        <td class="meaning">부모노드/<wbr/>왼쪽&nbsp;자식노드/<wbr/>오른쪽 자식노드 에서 게속됨</td>
+                                        <td>
+                                            알고리즘은 일반적으로 트리를 통과하거나 재귀 적으로 처리 노드의 한 자식에서 자신을 호출합니다. 이러한 이미지 요소는 다음 줄에 있는 노드를 보여 줍니다.
+                                        </td>
+                                    </tr>  
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/no_left,right_child.png" alt="node"/>
+                                        </td>
+                                        <td class="meaning">왼쪽 자식 노드 없음/<wbr/>오른쪽 자식 노드 없음</td>
+                                        <td>
+                                            노드에는 왼쪽/오른쪽 자식노드가 없습니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement"><img src="images/instructions/enter,leave_tree.png" alt="node"/></td>
+                                        <td class="meaning">입력/<wbr/>트리 나가기</td>
+                                        <td>
+                                            트리를 통과하는 알고리즘의 시작/종료 이미지입니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/came_from_the_left,right.png" alt="node"/>
+                                        </td>
+                                        <td class="meaning">왼쪽 자식에서/<wbr/>오른쪽 자식에서 왔습니다.</td>
+                                        <td>
+                                            알고리즘은 왼쪽 또는 오른쪽 자식에서 온 경우 중요합니다. 이 화살표는 조건이 충족되었음을 나타냅니다.
+                                        </td>
+                                    </tr>                                  
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/did_not_come_from_the_left,right.png" alt="node"/>
+                                        </td>
+                                        <td class="meaning">왼쪽 자식노드/<wbr/>오른쪽 자식노드에서 오지 않았다.</td>
+                                        <td>
+                                            마찬가지로 조건이 충족되지 않았을 경우 나옵니다.
+                                        </td>
+                                    </tr>                                                                  
+                                    <tr>
+                                        <td class="graphicElement"><img src="images/instructions/array.png" alt="node"/></td>
+                                        <td class="meaning">배열</td>
+                                        <td>
+                                            트리의 배열을 나타냅니다.
+                                        </td>
+                                    </tr>   
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>  
+                    <div class="clear"></div> 
+                </div>  
+                <!-- end content -->  
+                <div class="clear" style="height:40px"></div> 
+            </div>  
+            <!-- end container --> 
+        </div>  
+        <div id="bottomWrapper">  
+            <div id="bottom-links"> 
+                <div style="padding-top:20px"> 
+                    <!-- 
+                        DO NOT REMOVE OR MODIFY THE FOOTER LINK BELOW.
+                        If you want to remove this link please make a 10 dollars donation at www.dotemplate.com
+                    -->  
+                    <a href="http://www.dgsw.hs.kr/index.do" shape="rect">Copyright © DAEGU SOFTWARE HIGH SCHOOL. ALL RIGHTS RESERVED.</a>
+                </div> 
+            </div> 
+        </div> 
+    </body>
+</html>
