@@ -147,7 +147,7 @@ body {
   height: 100px;
   position: relative;
   /* margin-top: 30%; */
-  transform : translateY(150%);
+  transform : translateY(100%);
 }
 
 
