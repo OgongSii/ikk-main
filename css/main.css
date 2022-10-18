@@ -454,3 +454,9 @@ nav ul li a:hover {
   color: rgba(0, 35, 122, 0.7);
 }
 
+.frame1,.frame2,.frame3{
+  margin-left: 2.7%;
+  margin-right: auto;
+  margin-top: 1.5%;
+  margin-bottom: auto;
+}
