@@ -1,4 +1,4 @@
-window.addEventListener('scroll', throttle(onScroll, 5000))
+// window.addEventListener('scroll', throttle(onScroll, 5000))
 
 var mHtml = $("html");
 var page = 1;
