@@ -37,7 +37,7 @@ body {
 
 .logo {
   float: right;
-  margin-top: 15px;
+  margin-top: -68px;
   margin-right: 20px;
 
 }
@@ -403,7 +403,7 @@ body {
 }
 
 #section2 {
-  /* background-color: lightpink; */
+  background-color: lightpink;
 }
 
 #section3 {
@@ -425,7 +425,7 @@ nav {
   max-width: 960px;
   mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
   margin: 0 auto;
-  padding: 60px 0;
+  padding:  1px 0;
 }
 
 nav ul {
