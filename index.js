@@ -1,4 +1,9 @@
-// window.addEventListener('scroll', throttle(onScroll, 5000))
+document.addEventListener("scroll", function() {
+    console.log(`scroll`);
+});
+
+var timeout;
+
 
 var mHtml = $("html");
 var page = 1;
@@ -11,10 +16,12 @@ $(window).on("wheel", function (e) {
     if (e.originalEvent.deltaY > 0) {
         if (page == 4) return;
         page++;
+     
     } else if (e.originalEvent.deltaY < 0) {
         if (page == 1) return;
-        page--;
+        page--;  
     }
     var posTop = (page - 1) * $(window).height();
     mHtml.animate({ scrollTop: posTop });
+    
 })  
