@@ -1,3 +1,8 @@
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    // 모바일인 경우
+    alert('모바일');
+}
+
 document.addEventListener("scroll", function () {
     console.log(`scroll`);
 });
