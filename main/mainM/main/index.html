@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Document</title>
+</head>
+<div class="section" id="section1">
+  <div id="section1_detail">
+
+    <body ondragstart="return false">
+      <nav>
+        <ul>
+          <li>
+            <a href="#section1" id="button1">Home</a>
+          </li>
+          <li>
+            <a href="#section2" id="button2">Fence_nojari</a>
+          </li>
+          <li>
+            <a href="#section3" id="button3">BinaryTree KO</a>
+          </li>
+          <li>
+            <a href="#section4" id="button4">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="logo">
+        <img src="./css/img/f.png" height="25px">
+        <img src="./css/img/fence.png" height="25px">
+      </div>
+
+      <!-- <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label> -->
+
+      <ul class="menu__box">
+        <li><a class="menu__item">Home</a></li>
+        <li><a class="menu__item" href="https://nojari-ikk-1-4-cleening.netlify.app/">Fence_nojari</a></li>
+        <li><a class="menu__item" href="https://binary-tree-visualiser-ikk-ko.netlify.app/">ko_tree</a></li>
+      </ul>
+  </div>
+  <div class="main">
+    <p class="title">1학년 4반 <br>웹 페이지 통합 서비스</p>
+    <!-- <div class="imgimg">
+          <img src="./css/img/f.png" style="height: 10%;">
+          <img src="./css/img/fence.png" style="height: 10%;">
+        </div> -->
+  </div>
+
+
+  <div class="mouse_scroll">
+
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <div>
+      <span class="m_scroll_arrows unu"></span>
+      <span class="m_scroll_arrows doi"></span>
+      <span class="m_scroll_arrows trei"></span>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+<div class="section" id="section2">
+<iframe class="frame1" src="../nojari/index.html" width="95%" height="95%" frameborder=0 framespacing=0 marginheight=0 marginwidth=0></iframe>
+
+  </div> 
+  <div class="section" id="section3">
+    <iframe class="frame2" src="../BinaryTreeVisualiser/home.html" width="95%" height="95%" frameborder=0 framespacing=0 marginheight=0 marginwidth=0></iframe>
+  </div>
+
+  <div class="section" id="section4">
+    <iframe class="frame3" src="" width="95%" height="95%" frameborder=0 framespacing=0 marginheight=0 marginwidth=0></iframe>
+  </div>
+ 
+</div>
+
+  </body>
+
+</html>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/underscore@latest/underscore-umd-min.js"></script>
+<script>
+  window.document.oncontextmenu = new Function("return false");
+  window.document.onselectstart = new Function("return false");
+  window.document.ondragstart = new Function("return false");
+  // window.addEventListener("wheel", function (e) {
+  //   e.preventDefault();
+  // }, { passive: false });
+
+</script>
+
+
+<script src="./index.js"></script>

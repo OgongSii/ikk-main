@@ -1,0 +1,675 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <title>이진 트리 시각화 - 사용법</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="Web site" />
+    <meta name="description" content="Site description here" />
+    <meta name="keywords" content="keywords here" />
+    <meta name="language" content="en" />
+    <meta name="subject" content="Site subject here" />
+    <meta name="robots" content="All" />
+    <meta name="copyright" content="Your company" />
+    <meta name="abstract" content="Site description here" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+
+    <!-- styles -->
+    <link id="theme" rel="stylesheet" type="text/css" href="styles/style.css" title="theme" />
+    <script type="text/javascript" src="styles/style.js"></script>
+    <link href="styles/jquery/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+
+    <!-- third-party scripts: jQuery, jQuery UI -->
+    <script type="text/javascript" src="btv/third-party/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="btv/third-party/jquery-ui-1.10.3.custom.js"></script>
+</head>
+
+<body>
+    <!-- top wrapper -->
+    <div id="topWrapper">
+        <div id="topBanner"></div>
+    </div>
+    <div id="topnav">
+        <ul>
+            <li>
+                <a href="home.html" shape="rect">홈</a>
+            </li>
+            <li>
+                <a href="binary-heap.html" shape="rect">이진 힙</a>
+            </li>
+            <li>
+                <a href="binary-search-tree.html" shape="rect">이진 탐색 트리</a>
+            </li>
+            <li>
+                <a href="pseudocodes.html" shape="rect">코드</a>
+            </li>
+            <li id="current">
+                <a href="instructions.html" shape="rect">사용법</a>
+            </li>
+        </ul>
+    </div>
+        <!-- top wrapper -->  
+        <!-- <div id="topWrapper">  -->
+            <div id="topBanner">
+                <div>
+                    <iframe class="nojari" src="codeup_printzz/p5.html" width="1100px" height="146px" scrolling="no"></iframe>
+                </div>
+            </div> 
+        </div>  
+            <!--  content -->
+            <div id="content">
+                <div style="margin-top:20px;">
+                    <div class="clear"></div>
+
+                    <div id="quickmenu">
+                        <span class="quickmenu_header">Quick Menu:</span>
+                        <ul>
+                            <li><a href="#graphic_elements">이미지 요소</a></li>
+                            <li><a href="#controls">컨드롤러</a>
+                                <ul>
+                                    <li><a href="#animation_controls">애니메이션 컨트롤</a></li>
+                                    <li><a href="#algorithms_controls">알고리즘 컨트롤</a></li>
+                                    <li><a href="#history_controls">기록 컨트롤</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h1 id="instructions" class="anchor left_clear">Instructions</h1>
+                        <p>
+                            여기에서 <strong>이진트리 시각와</strong>의 사용법을 숙지하실 수 있습니다.
+                            <br />
+                            사용법은 두 가지로 나뉩니다
+                            <a href="binary-heap.html">여기에서는</a> <strong>바이너리 힙 + 우선순위 큐</strong>
+                            (랜덤 바이너리 힙, 바이너리 힙 빌드, 삽입, 삭제, 최대 추출, 최대 가져오기, 힙 정렬)을 사용 할 수 있습니다.
+                            <a href="binary-heap.html">여기에서는</a> <strong>이진 탐색 트리</strong>
+                            (이진 탐색 트리, 삽입, 검색, 삭제, 최대값 가져오기, 최소값 가져옿기, 선행자 가져오기, 후임자 가져오기, to preorder array, to inorder
+                            (sorted) array, to postorder array).
+                            <br />
+                            이진 탐색 트리, 이진 힙 또는 나열된 알고리즘이 무엇을 의미하는지 잘 모르겠으면 <a href="pseudocodes.html">여기</a> 를 방문하세요.
+                            <br />
+                            표기를 이해하기 힘드시면 <a href="#graphic_elements">Icon</a> 를 참고하세요.
+                            표기릐 뜻을 알고싶으시면 <a href="#controls">Control</a> 를 참고하세요.
+                        </p>
+
+
+                        <div class="subsection">
+                            <h2 id="graphic_elements" class="anchor left_clear">Graphic elements</h2>
+                            <p>
+                                사용된 모든 표기를 확인할 수 있습니다.
+                            </p>
+                            <table class="instructions">
+                                <thead>
+                                    <tr>
+                                        <th class="graphicElement">Graphic</th>
+                                        <th>Meaning</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/node.png" alt="node" />
+                                        </td>
+                                        <td class="meaning">( 노드 ) Node</td>
+                                        <td>
+                                            트리를 구성하는 요소
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/selected_node.png" alt="node" />
+                                        </td>
+                                        <td class="meaning">선택된 노드</td>
+                                        <td>
+                                            선택한 노드는 빨간색 선으로 강조 표시됩니다. 노드를 클릭하면 아무 노드나 선택할 수 있습니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/edge.png" alt="node" />
+                                        </td>
+                                        <td class="meaning">( 엣지 ) Edge</td>
+                                        <td>
+                                            노드와 노드 사이를 이어주는 선
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/parent_with_children.png" alt="node" />
+                                        </td>
+                                        <td class="meaning">자식 노드</td>
+                                        <td>
+                                            부모노드가 있는 노드
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/comparison_signs.png" alt="node" />
+                                        </td>
+                                        <td class="meaning">부등호</td>
+                                        <td>
+                                            두 노드의 값을 비교합니다.
+                                            두 노드의 값을 비교하는경우 부등호를 사용합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/continue_in_parent,left_child,right_child.png"
+                                                alt="node" />
+                                        </td>
+                                        <td class="meaning">자식노드에서 게속됨/<wbr/>왼쪽&nbsp;자식노드/<wbr/>오른쪽 자식노드</td>
+                                        <td>
+                                            자식노드의 부모를 가르킴
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/no_left,right_child.png" alt="node" />
+                                        </td>
+                                        <td class="meaning">왼쪽/<wbr/>오른쪽 자식노드 없음</td>
+                                        <td>
+                                            왼쪽/오른쪽 자식노드가 존재하지않음
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement"><img src="images/instructions/enter,leave_tree.png"
+                                                alt="node" /></td>
+                                        <td class="meaning">트리 들어가기/<wbr/>트리 나가기</td>
+                                        <td>
+                                            트리 말고리즘의 시작/종료 알림
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/came_from_the_left,right.png" alt="node" />
+                                        </td>
+                                        <td class="meaning">왼쪽/<wbr/>오른쪽 자식에서 유래</td>
+                                        <td>
+                                            왼쪽 또는 오른쪽 자식에서 유래 될 조건이 충족됨
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement">
+                                            <img src="images/instructions/did_not_come_from_the_left,right.png"
+                                                alt="node" />
+                                        </td>
+                                        <td class="meaning">왼쪽/<wbr/>오른쪽 자식에서 유리되지않음</td>
+                                        <td>
+                                            왼쪽/오른쪽 자식에서 유래 될 조건이 충족되지않음
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="graphicElement"><img src="images/instructions/array.png"
+                                                alt="node" /></td>
+                                        <td class="meaning">배열</td>
+                                        <td>
+                                            트리의 배열 표현
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="subsection">
+                            <h2 id="controls" class="anchor">Controls</h2>
+                            <p>
+                                컨트롤은 세 가지의 종류로 나뉩니다. <a href="#animation_controls">애니메이션</a>, <a
+                                    href="#algorithms_controls">알고리즘</a>, <a href="#history_controls">기록</a>
+                            </p>
+
+                            <div class="subsection">
+                                <h3 id="animation_controls" class="anchor">Animation controls</h3>
+                                <p>
+                                    아래 버튼은 현재 재생 중인 애니메이션을 제어하며 이전 애니메이션이나 다음 애니메이션으로 이동할 수 있습니다.
+                                    한 번에 재생 버튼만 표시되거나 일시 중지 버튼만 표시됩니다.
+                                    적절한 명령이 없으면 버튼이 비활성화됩니다.
+                                </p>
+                                <table class="instructions">
+                                    <thead>
+                                        <tr>
+                                            <th class="inputField">Button</th>
+                                            <th>Meaning</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="inputField">
+                                                <button id="playButtonInstr">Play</button>
+                                                <script type="text/javascript">
+                                                    $("#playButtonInstr").button({
+                                                        icons: {
+                                                            primary: "ui-icon-play"
+                                                        },
+                                                        text: false
+                                                    });
+                                                </script>
+                                            </td>
+                                            <td class="meaning">애니메이션 재생</td>
+                                            <td>
+                                                이 버튼은 일시 중지된 애니메이션을 재생하기 시작합니다. ( 자동으로 애니메이션이 재생됩니다. )
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <button id="pauseButtonInstr">Pause</button>
+                                                <script type="text/javascript">
+                                                    $("#pauseButtonInstr").button({
+                                                        icons: {
+                                                            primary: "ui-icon-pause"
+                                                        },
+                                                        text: false
+                                                    });
+                                                </script>
+                                            </td>
+                                            <td class="meaning">애니메이션 중지</td>
+                                            <td>
+                                                이 버튼은 애니메이션 재생을 일시 중지합니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <button id="skipBackwardButtonInstr">Skip Backward</button>
+                                                <script type="text/javascript">
+                                                    $("#skipBackwardButtonInstr").button({
+                                                        icons: {
+                                                            primary: "ui-icon-seek-start"
+                                                        },
+                                                        text: false
+                                                    });
+                                                </script>
+                                            </td>
+                                            <td class="meaning">애니메이션을 다시 재생</td>
+                                            <td>
+                                                애니메이션을 다시 재생합니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <button id="skipForwardButtonInstr">Skip Forward</button>
+                                                <script type="text/javascript">
+                                                    $("#skipForwardButtonInstr").button({
+                                                        icons: {
+                                                            primary: "ui-icon-seek-end"
+                                                        },
+                                                        text: false
+                                                    });
+                                                </script>
+                                            </td>
+                                            <td class="meaning">애니메이션 건너뛰기</td>
+                                            <td>
+                                                어떤 애니메이션은 시간이 오래 걸립니다. 이 버튼을 누르면 애니메이션을 건너뛸 수 있습니다.
+                                                애니메이션이 스킵되어 다음 알고리즘<em>(있는 경우)</em>을 재생하지 않습니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <button id="previousButtonInstr">Previous</button>
+                                                <script type="text/javascript">
+                                                    $("#previousButtonInstr").button({
+                                                        icons: {
+                                                            primary: "ui-icon-seek-prev"
+                                                        },
+                                                        text: false
+                                                    });
+                                                </script>
+                                            </td>
+                                            <td class="meaning">이전 애니메이션</td>
+                                            <td>
+                                                이전 알고리즘<em>(애니메이션)</em> 으로 이동하여 재생을 시작합니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <button id="nextButtonInstr">Next</button>
+                                                <script type="text/javascript">
+                                                    $("#nextButtonInstr").button({
+                                                        icons: {
+                                                            primary: "ui-icon-seek-next"
+                                                        },
+                                                        text: false
+                                                    });
+                                                </script>
+                                            </td>
+                                            <td class="meaning">다음 애니메이션</td>
+                                            <td>
+                                                다음 알고리즘<em>(애니메이션)</em> 으로 이동하여 재생을 시작합니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input id="continuouslyCheckboxInstr" type="checkbox"
+                                                    checked="checked" /><label
+                                                    for="continuouslyCheckboxInstr">Continuously</label>
+                                            </td>
+                                            <td class="meaning">애니메이션을 차례로 재생</td>
+                                            <td>
+                                                이 체크박스를 선택하면 현재 애니메이션이 종료된 후 다음 애니메이션이 자동으로 시작됩니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                Speed of move: <div id="moveSpeedSliderInstr"></div>
+                                                <script type="text/javascript">
+                                                    $("#moveSpeedSliderInstr").slider({
+                                                        min: 100,
+                                                        max: 1000,
+                                                        value: 250
+                                                    });
+                                                </script>
+                                            </td>
+                                            <td class="meaning">이동 속도 설정</td>
+                                            <td>
+                                                애니메이션에는 두 가지 단계가 있습니다.
+                                                첫 번째는 그래픽 요소를 이동하는것
+                                                두 번째는 다른 무언가를 보여주는 데 시간이 걸립니다.
+                                                이 버튼은 첫 번째 유형의 단계를 설정합니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                Duration of a step: <div id="stepDurationSliderInstr"></div>
+                                                <script type="text/javascript">
+                                                    $("#stepDurationSliderInstr").slider({
+                                                        min: 100,
+                                                        max: 2000,
+                                                        value: 650
+                                                    });
+                                                </script>
+                                            </td>
+                                            <td class="meaning">단계 기간 설정</td>
+                                            <td>
+                                                위 설명과 같이, 이 버튼은 다른 종류의 애니메이션 지속 시간을 설정합니다.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="subsection">
+                                <h3 id="history_controls" class="anchor">History controls</h3>
+                                <p>
+                                    실행된 모든 알고리즘은 기록에 표시됩니다.
+                                    다시 재생하거나 기록를 변경할 수 있습니다.
+                                </p>
+                                <table class="instructions">
+                                    <thead>
+                                        <tr>
+                                            <th class="inputField">Button</th>
+                                            <th>Meaning</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="inputField">
+                                                <select size="6" style="overflow:auto; width: 250px">
+                                                    <option>randomTree(36, 22, 65, 1, 31, 44)</option>
+                                                    <option selected="selected">inser(value: 14)</option>
+                                                    <option>toInorderArray()</option>
+                                                </select>
+                                            </td>
+                                            <td class="meaning">실행된 알고리즘 목록</td>
+                                            <td>
+                                                실행된 모든 알고리즘이 나열됩니다.
+                                                첫 번째는 목록의 맨 위에 있습니다.
+                                                새로운 알고리즘이 끝에 추가됩니다.
+                                                이전 알고리즘(애니메이션)을 재생한 다음 다른 알고리즘을 실행하여 기록을 변경할 수 있습니다.
+                                                현재 알고리즘(애니메이션)이 선택되었습니다. 두 번 클릭하여 다른 항목을 선택할 수 있습니다.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="subsection">
+                                <h3 id="algorithms_controls" class="anchor">Algorithms controls</h3>
+                                <p>
+                                    아래의 버튼들을 클릭하면 선택한 알고리즘을 실행하고 애니메이션을 보여줍니다.
+                                    또한 알고리즘에 추가합니다 <a href="#history_controls">history</a>, 그리고 애니메이션을 다시 재생할 수 있습니다.
+                                    <br />
+                                    일부 알고리즘은 입력이 필요합니다. 노드 또는 값입니다.
+                                    텍스트 입력 시 문자열로 값이 입력됩니다. 노드를 클릭하여 선택합니다.
+                                    <br />
+                                    일부 알고리즘은 값을 반환합니다. 노드인 경우 애니메이션이 끝날 때 노드가 선택됩니다.
+                                    배열인 경우, 배열은 애니메이션의 끝에 표시됩니다.
+                                    <br />
+                                    이 버튼은 애니메이션이 중지된 경우에만 활성화됩니다 - 마지막 애니메이션이 모두 재생되었습니다.
+                                    <br />
+                                    이러한 알고리즘에 대한 자세한 정보를 알고 싶다면, 여기에서 참고하세요 <a href="pseudocodes.html">pseudocodes</a>.
+                                </p>
+                                <table class="instructions">
+                                    <thead>
+                                        <tr>
+                                            <th class="inputField">Algorithm (Binary Heap)</th>
+                                            <th>Meaning</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Random Heap" />
+                                                min: <input type="text" value="0" size="1" />
+                                                max: <input type="text" value="99" size="1" />
+                                            </td>
+                                            <td class="meaning">무작위 힙 생성</td>
+                                            <td>
+                                                랜덤 이진 힙을 만듭니다.
+                                                생성된 노드의 값은 지정된 간격에서 가져옵니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Build Heap" />
+                                                array: <input type="text" size="15" />
+                                            </td>
+                                            <td class="meaning">힙 생성</td>
+                                            <td>
+                                                지정된 배열에서 이진 힙을 빌드합니다.
+                                                배열은 "," (쉼표)로 구분된 값의 문자열로 입력됩니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Insert" />
+                                                value: <input type="text" size="1" />
+                                            </td>
+                                            <td class="meaning">노드 삽입</td>
+                                            <td>
+                                                지정된 값을 사용하여 새 노드를 생성하고 힙에 삽입합니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Delete" /> selected node
+                                            </td>
+                                            <td class="meaning">노드 삭제</td>
+                                            <td>
+                                                선택한 노드를 힙에서 삭제합니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Extract Max" />
+                                            </td>
+                                            <td class="meaning">노드의 최대값 추출</td>
+                                            <td>
+                                                루트 노드 삭제와 동일합니다.
+                                                최대값을 가진 노드는 항상 이진 힙의 루트입니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Get max" />
+                                            </td>
+                                            <td class="meaning">최대값 노드 가져오기</td>
+                                            <td>
+                                                트리의 루트를 반환합니다. 하지만
+                                                최대값을 가진 노드는 항상 이진 힙의 루트입니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Heap Sort" />
+                                            </td>
+                                            <td class="meaning">힙 정렬</td>
+                                            <td>
+                                                이 알고리즘은 힙을 정렬합니다. 결과는 배열로 표시됩니다.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="instructions">
+                                    <thead>
+                                        <tr>
+                                            <th class="inputField">Algorithm (Binary Search Tree)</th>
+                                            <th>Meaning</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Random BSTree" />
+                                                min: <input type="text" value="0" size="1" />
+                                                max: <input type="text" value="99" size="1" />
+                                            </td>
+                                            <td class="meaning">무작위 검색 트리 생성</td>
+                                            <td>
+                                                무작위 이진 검색 트리를 만듭니다.
+                                                생성된 노드의 값은 지정된 간격에서 가져옵니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Insert" />
+                                                value: <input type="text" size="1" />
+                                            </td>
+                                            <td class="meaning">노드 삽입</td>
+                                            <td>
+                                                지정된 값을 사용하여 새 노드를 만들고 이 노드를 이진 검색 트리에 삽입합니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Find" />
+                                                value: <input type="text" size="1" />
+                                            </td>
+                                            <td class="meaning">탐색 노드</td>
+                                            <td>
+                                                지정된 값을 가진 노드의 <em>첫 번째</em> 항목을 찾습니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Delete" /> selected node
+                                            </td>
+                                            <td class="meaning">노드 삭제</td>
+                                            <td>
+                                                이진 탐색 트리에서 선택한 노드를 삭제합니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Get Max" /> of selected (sub)tree
+                                            </td>
+                                            <td class="meaning">노드의 최대값</td>
+                                            <td>
+                                                선택한 하위 트리의 최대값을 가진 노드를 찾아 반환합니다.
+                                                루트를 선택하여 하위 트리를 선택합니다.
+                                                노드를 선택하지 않으면 전체 트리의 루트가 선택됩니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Get Min" /> of selected (sub)tree
+                                            </td>
+                                            <td class="meaning">노드의 최소값</td>
+                                            <td>
+                                                선택한 하위 트리의 최소값이 있는 노드를 찾아 반환합니다.
+                                                루트를 선택하여 하위 트리를 선택합니다.
+                                                노드를 선택하지 않으면 전체 트리의 루트가 선택됩니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Get Predecessor" /> of selected node
+                                            </td>
+                                            <td class="meaning">전임자 찾기</td>
+                                            <td>
+                                                선택한 노드의 이전 노드를 가져옵니다.
+                                                이전 노드 값이 처음보다 낮은 노드입니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="Get Successor" /> of selected node
+                                            </td>
+                                            <td class="meaning">후임자 찾기</td>
+                                            <td>
+                                                선택한 노드의 후속 노드를 가져옵니다.
+                                                첫 번째 다음 값이 더 높은 노드입니다. </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="To Preorder Array" />
+                                            </td>
+                                            <td class="meaning">노드를 전위 배열로 정렬합니다.</td>
+                                            <td>
+                                                전위로 트리를 이동합니다. 전위 배열을 표시합니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="To Inorder Array" /> (To Sorted Array)
+                                            </td>
+                                            <td class="meaning">노드를 순서대로(정렬된) 배열로 정렬합니다.</td>
+                                            <td>
+                                                순서대로 트리를 정리합니다. 순서 배열을 표시합니다.
+                                                이 배열은 값별로 정렬됩니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inputField">
+                                                <input type="submit" value="To Postorder Array" />
+                                            </td>
+                                            <td class="meaning">노드를 후위 배열로 정렬합니다.</td>
+                                            <td>
+                                                후위로 트리를 이동합니다. 후위 배열을 표시합니다.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!-- end content -->
+            <div class="clear" style="height:40px"></div>
+        </div>
+        <!-- end container -->
+    </div>
+    <div id="bottomWrapper">
+        <div id="bottom-links">
+            <div style="padding-top:20px">
+                <!-- 
+          DO NOT REMOVE OR MODIFY THE FOOTER LINK BELOW.
+          If you want to remove this link please make a 10 dollars donation at www.dotemplate.com
+                    -->
+                <a href="http://www.dgsw.hs.kr/index.do" shape="rect">Copyright © DAEGU SOFTWARE HIGH SCHOOL. ALL RIGHTS
+                    RESERVED.</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
